@@ -13,13 +13,34 @@
   .header {
     background-color: #ffc72c;
     color: #fff;
-    font-size: 20px;
+    font-size: 20px;/*1rem = 16px*/ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .textodestaque{
+    color: aqua;
   }
   
-  
-  .nav-links a {
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem ;
     
+    
+  }
+  .nav-links a {
+    text-decoration: none;
     color: #1D428A;
+  }
+
+  .nav-links a:hover{
+    border-bottom: 2px solid blue;
+
   }
   
   /* Hero */
@@ -29,12 +50,36 @@
     background-position: center;
     height: 400px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.718);
+    width: 100%;
+    height: 100%;
+    position: absolute
   }
 
   .hero a{
     color: #fff;
-    font-size: 26px;
-  }
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #1D428A;
+    padding: 1rem 1.5rem ;
+    border-radius: .7rem;
+    gap: 2rem;
+    z-index: 1;
+    }
+
+    .hero a:hover{
+      background-color:#fff;
+      color: #1D428A;
+      transition:background-color .5s;
+    }
   
   /* .hero::after {
     content: "";
@@ -47,6 +92,7 @@
     color: white;
     font-size: 48px;
     font-weight: bold;
+    z-index: 1;
   }
 
 
@@ -65,4 +111,10 @@
   .titulo-card, .descricao-card {
     color: #1D428A;
   }
-  
+
+  .painel{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    
+  }
